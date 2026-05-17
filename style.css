@@ -261,3 +261,60 @@ a {
         font-size: 2rem; /* Hạ bớt cỡ chữ tiêu đề trên mobile cho đỡ thô */
     }
 }
+/* --- PORTFOLIO SECTION STYLES --- */
+.portfolio-section {
+    background-color: #ffffff;
+}
+
+.portfolio-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Giao diện thanh bộ lọc nút bấm */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* Chia lưới Grid linh hoạt tự động co giãn theo Spec của thầy */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; /* Khoảng cách giữa các ảnh là 1.5rem đúng Spec */
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Bo góc khối dự án 12px đúng Spec */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    aspect-ratio: 4/3; /* Giữ tỷ lệ ảnh luôn là 4:3 đúng Spec */
+    object-fit: cover;
+    display: block;
+}
