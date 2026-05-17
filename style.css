@@ -1,0 +1,32 @@
+/* 1. Định nghĩa các biến màu sắc và font chữ theo Design Specs */
+:root {
+    --color-primary: #6366f1;    /* Indigo */
+    --color-secondary: #8b5cf6;  /* Purple */
+    --color-dark: #1e293b;       /* Slate dark */
+    --color-light: #f8fafc;      /* Slate light */
+    --color-text: #334155;       /* Slate text */
+    --font-main: 'Segoe UI', sans-serif;
+}
+
+/* 2. Reset CSS cơ bản để các trình duyệt hiển thị giống nhau */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Cuộn trang mượt mà */
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
