@@ -571,3 +571,38 @@ textarea {
     font-size: 0.9rem;
     opacity: 0.5;
 }
+/* --- REFACTOR VALIDATION UI & RESPONSIVE BREAKPOINTS --- */
+
+/* Khi người dùng đang gõ mà dữ liệu sai (ví dụ email thiếu chữ @), viền sẽ chuyển sang đỏ nhẹ */
+.form-group input:not(:placeholder-shown):invalid,
+.form-group textarea:not(:placeholder-shown):invalid {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+/* Khi người dùng đã điền đúng định dạng, viền sẽ chuyển sang màu xanh lá mượt mà */
+.form-group input:not(:placeholder-shown):valid,
+.form-group textarea:not(:placeholder-shown):valid {
+    border-color: #10b981;
+    background-color: #f0fdf4;
+}
+
+/* ĐIỀU CHỈNH GIAO DIỆN TRÊN MOBILE CHẠY TỪ TRÊN XUỐNG (< 768px) */
+@media (max-width: 768px) {
+    /* Đưa cấu trúc 2 cột của Contact về 1 cột dọc thẳng đứng */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* Đưa cấu trúc 3 cột của Footer về 1 cột thẳng hàng, căn giữa toàn bộ chữ đúng Hint */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center; /* Căn giữa các nút MXH trên màn hình điện thoại */
+    }
+}
