@@ -630,3 +630,39 @@ textarea {
     height: 250px;
     object-fit: cover;
 }
+/* --- CSS CHO BÀI THỰC HÀNH 2.3: COMMENT SECTION --- */
+
+/* Cố định kích thước Avatar bình luận cha */
+.comment .comment-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Đường line và lề thụt của bình luận con */
+.comment .comment.reply {
+    border-left: 3px solid #e2e8f0;
+    padding-left: 1rem;
+    margin-left: 1rem; /* Khoảng cách lề vừa phải cho Mobile */
+}
+
+/* Tăng độ thụt lề khi xem trên máy tính (Desktop) */
+@media (min-width: 768px) {
+    .comment .comment.reply {
+        margin-left: 3rem; /* Thụt sâu vào nhìn rõ phân cấp */
+    }
+    .comment .comment.reply .comment-avatar {
+        width: 40px; /* Avatar con nhỏ hơn avatar cha một chút */
+        height: 40px;
+    }
+}
+
+/* Định dạng màu sắc nút trả lời */
+.btn-link {
+    color: #0d6efd !important;
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    color: #0a58ca !important;
+}
