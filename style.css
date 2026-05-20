@@ -606,3 +606,27 @@ textarea {
         justify-content: center; /* Căn giữa các nút MXH trên màn hình điện thoại */
     }
 }
+/* --- CSS CHO BÀI THỰC HÀNH 2.2 --- */
+
+/* Thiết lập Sticky Sidebar trượt theo màn hình trên Desktop */
+@media (min-width: 992px) {
+    .my-sticky-sidebar {
+        position: sticky;
+        top: 80px; /* Khoảng cách cách mép trên màn hình khi cuộn chuột xuống */
+        z-index: 10;
+    }
+}
+
+/* Bo tròn góc và đổ bóng nhẹ nhàng cho toàn bộ Card theo thiết kế */
+#blog .card {
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+    border-radius: 12px !important;
+    overflow: hidden; /* Để ảnh banner không bị đè mất góc bo tròn */
+}
+
+/* Ảnh banner bài viết căn chỉnh tỉ lệ */
+#blog .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
