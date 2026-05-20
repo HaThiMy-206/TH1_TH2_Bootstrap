@@ -1,3 +1,51 @@
+/* ========================================================== */
+/* BÀI THỰC HÀNH 2.4 - PHẦN 1: OVERRIDE BOOTSTRAP THEME COLOURS */
+/* ========================================================== */
+:root {
+    /* Thay đổi màu Primary thành tông màu Xanh Ngọc (Teal 500) */
+    --bs-primary: #14b8a6;
+    --bs-primary-hover: #0d9488;
+    --bs-primary-rgb: 20, 184, 166;
+
+    /* Thay đổi màu Secondary thành màu Slate (Xám Đá) */
+    --bs-secondary: #64748b;
+    --bs-secondary-rgb: 100, 116, 139;
+
+    /* Áp dụng font chữ mới toàn hệ thống */
+    --bs-body-font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Ép font chữ và màu nền nhẹ nhàng cho toàn trang web */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8fafc !important; /* Slate 50 */
+    color: #334155; /* Slate 700 */
+}
+
+/* Đổi màu chữ tiêu đề cho sâu và nét hơn */
+h1, h2, h3, h4, h5, h6 {
+    color: #0f172a; /* Slate 900 */
+}
+
+/* Ghi đè hiệu ứng hover của nút bấm primary Bootstrap */
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+.btn-primary:hover {
+    background-color: var(--bs-primary-hover) !important;
+    border-color: var(--bs-primary-hover) !important;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #ffffff !important;
+}
 /* 1. Định nghĩa các biến màu sắc và font chữ theo Design Specs */
 :root {
     --color-primary: #6366f1;    /* Indigo */
