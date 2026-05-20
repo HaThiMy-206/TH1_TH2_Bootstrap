@@ -211,7 +211,30 @@
                             <a href="#" class="btn btn-outline-primary">Read More</a>
                         </div>
                     </article>
-
+                    <div class="card mb-4 mt-4">
+                        <div class="card-header bg-white fw-bold py-3">
+                            <h5 class="mb-0 text-dark">Leave a Comment</h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <form class="needs-validation">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="comment-name" class="form-label fw-semibold text-secondary">Name</label>
+                                        <input type="text" class="form-control" id="comment-name" required placeholder="Your Name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="comment-email" class="form-label fw-semibold text-secondary">Email</label>
+                                        <input type="email" class="form-control" id="comment-email" required placeholder="name@example.com">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comment-text" class="form-label fw-semibold text-secondary">Comment</label>
+                                    <textarea class="form-control" id="comment-text" rows="4" required placeholder="Write your comment here..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary px-4 fw-medium">Post Comment</button>
+                            </form>
+                        </div>
+                    </div>
                     <article class="card mb-4">
                         <img src="https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=800" class="card-img-top" alt="Git and GitHub">
                         <div class="card-body">
